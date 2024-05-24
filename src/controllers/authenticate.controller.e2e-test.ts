@@ -15,7 +15,7 @@ describe('Authenticate (E2E)', () => {
     }).compile()
 
     app = moduleRef.createNestApplication()
-    prisma = app.get(PrismaService)
+    prisma = moduleRef.get(PrismaService)
 
     await app.init()
   })
