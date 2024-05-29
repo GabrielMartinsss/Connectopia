@@ -27,7 +27,7 @@ export class PrismaQuestionsRepository implements QuestionsRepository {
       this.questionAttachmentRepository.createMany(
         question.attachments.getNewItems(),
       ),
-      this.questionAttachmentRepository.createMany(
+      this.questionAttachmentRepository.deleteMany(
         question.attachments.getRemovedItems(),
       ),
     ])
