@@ -7,7 +7,7 @@ export interface CommentWithAuthorProps {
   authorId: UniqueEntityId
   author: string
   createdAt: Date
-  UpdatedAt?: Date | null
+  updatedAt?: Date | null
 }
 
 export class CommentWithAuthor extends ValueObject<CommentWithAuthorProps> {
@@ -31,8 +31,8 @@ export class CommentWithAuthor extends ValueObject<CommentWithAuthorProps> {
     return this.props.createdAt
   }
 
-  get UpdatedAt() {
-    return this.props.UpdatedAt
+  get updatedAt() {
+    return this.props.updatedAt
   }
 
   static create(props: CommentWithAuthorProps) {
