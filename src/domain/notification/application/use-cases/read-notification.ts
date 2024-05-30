@@ -31,7 +31,7 @@ export class ReadNotificationUseCase {
       return left(new NotAllowedError())
 
     notification.read()
-    await this.notificationRepository.create(notification)
+    await this.notificationRepository.save(notification)
 
     return right({ notification })
   }
