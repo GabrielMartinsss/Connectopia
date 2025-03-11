@@ -2,7 +2,7 @@
 
 ## 📌 Introdução  
 
-Bem-vindo ao **Connectopia**, um sistema de fórum acadêmico projetado para promover a troca de conhecimento entre estudantes e professores. A plataforma permite que estudantes publiquem perguntas sobre diversos assuntos, enquanto outros estudantes e professores podem interagir fornecendo respostas.  
+**Connectopia**, um sistema de fórum acadêmico projetado para promover a troca de conhecimento entre estudantes e professores. A plataforma permite que estudantes publiquem perguntas sobre diversos assuntos, enquanto outros estudantes e professores podem interagir fornecendo respostas.  
 
 O projeto foi desenvolvido utilizando os princípios de **Domain-driven Design (DDD)** e **Clean Architecture**, garantindo modularidade e escalabilidade.  
 
