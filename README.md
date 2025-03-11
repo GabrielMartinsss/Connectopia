@@ -1,73 +1,70 @@
+# Connectopia
+
+## 📌 Introdução  
+
+Bem-vindo ao **Connectopia**, um sistema de fórum acadêmico projetado para promover a troca de conhecimento entre estudantes e professores. A plataforma permite que estudantes publiquem perguntas sobre diversos assuntos, enquanto outros estudantes e professores podem interagir fornecendo respostas.  
+
+O projeto foi desenvolvido utilizando os princípios de **Domain-driven Design (DDD)** e **Clean Architecture**, garantindo modularidade e escalabilidade.  
+
+---
+
+## 🔹 O que é o Connectopia?  
+
+O **Connectopia** é uma plataforma robusta que organiza as interações dentro de um fórum acadêmico de forma estruturada e eficiente.  
+
+O sistema é dividido em dois **domínios principais**:  
+
+- **Fórum:** Responsável pelo gerenciamento das perguntas e respostas.  
+- **Notificação:** Responsável por enviar alertas e manter os usuários informados sobre interações relevantes.  
+
+Essa separação permite gerenciar discussões de forma independente da camada de comunicação, garantindo flexibilidade na evolução da aplicação.  
+
+---
+
+## ⚙️ Como Funciona?  
+
+### 📝 Publicação de Perguntas  
+Os estudantes podem criar novas perguntas no fórum, categorizando os tópicos para facilitar a organização das discussões. Cada pergunta possui um título e uma descrição detalhada do problema, ajudando na busca por soluções.  
+
+### 💬 Respostas e Interações  
+Outros usuários podem responder às perguntas, criando discussões produtivas dentro da plataforma.  
+As respostas podem ser **votadas**, destacando as mais relevantes e garantindo que o melhor conteúdo fique visível para todos.  
+
+### 🔔 Gerenciamento de Notificações  
+O sistema conta com um **domínio específico para notificações**, garantindo que os usuários sejam informados sobre novas respostas ou interações em suas perguntas. Isso melhora a experiência do usuário, mantendo-o atualizado sobre as discussões que participa.  
+
+### 🏗️ Arquitetura Baseada em DDD e Clean Architecture  
+A plataforma é estruturada seguindo os princípios de **Domain-driven Design (DDD)**, separando os conceitos de Fórum e Notificação em **domínios distintos**.  
+Isso permite **maior organização, escalabilidade e facilidade de manutenção** do código.  
+
+### 📦 Camada de Aplicação  
+A camada de aplicação contém os **casos de uso e repositórios** necessários para interagir com o domínio.  
+As regras de negócio são encapsuladas em casos de uso específicos, garantindo que cada ação siga as diretrizes do sistema.  
+
+### 🏛️ Camada de Domínio e Enterprise  
+- O domínio do **Fórum** possui entidades como `Pergunta` e `Resposta`, além de eventos que podem acionar notificações.  
+- O domínio de **Notificação** gerencia alertas e mensagens para os usuários, garantindo que sejam informados sobre interações relevantes.  
+
+### 🔄 Sistema de Eventos e Assinantes  
+A arquitetura conta com um **sistema de eventos dentro do domínio de Notificação**, permitindo que novos eventos **disparem ações específicas**, como alertar um usuário quando sua pergunta for respondida.  
+
+### 💡 Desenvolvimento com TypeScript  
+A aplicação foi construída em **TypeScript**, garantindo **maior segurança no código** e facilitando sua escalabilidade.  
+
+---
+
+## 🚀 Tecnologias Utilizadas  
+
+- **Linguagem:** TypeScript  
+- **Framework:** Nestjs  
+- **Testes:** Vitest  
+- **Arquitetura:** Domain-driven Design (DDD) + Clean Architecture  
+
+---
+
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
