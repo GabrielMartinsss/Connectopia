@@ -2,20 +2,20 @@ version: '3.8'
 
 services:
   postgres:
-    container_name: forum-nest-clean-architecture-pg
+    container_name: connectopia-pg
     image: postgres
     ports: 
       - 5432:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: docker
-      POSTGRES_DB: forum-nest-clean-architecture
+      POSTGRES_DB: Connectopia
       PGDATA: /data/postgres
     volumes:
       - ./data/pg:/data/postgres
   
   cache:
-    container_name: forum-nest-clean-architecture-cache
+    container_name: connectopia-cache
     image: redis
     ports: 
       - 6379:6379
